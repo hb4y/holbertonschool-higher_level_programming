@@ -7,14 +7,11 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *first = NULL;
-	listint_t *second = NULL;
+	listint_t *first = list;
+	listint_t *second = list;
 
 	if (list)
 	{
-		first = list;
-		second = list;
-
 		do {
 			first = first->next;
 			second = second->next->next;
