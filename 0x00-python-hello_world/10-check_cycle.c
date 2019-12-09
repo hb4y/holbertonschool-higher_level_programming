@@ -19,7 +19,7 @@ int check_cycle(listint_t *list)
 			if (first == second)
 				return (1);
 
-		} while (first->next && second->next->next);
+		} while (first && second && first->next && second->next->next);
 	}
 	return (0);
 }
