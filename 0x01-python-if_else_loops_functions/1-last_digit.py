@@ -14,4 +14,4 @@ if (last == 0):
 elif (last < 6):
     print(str1 + "less than 6 and not 0")
 elif (last > 5):
-    print(str1 + "is greater than 5")
+    print(str1 + "greater than 5")
