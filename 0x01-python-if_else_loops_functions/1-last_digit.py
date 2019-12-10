@@ -2,9 +2,11 @@
 import random
 
 number = random.randint(-10000, 10000)
-last = int(repr(number)[-1])
+
 if (number < 0):
-    last *= -1
+    last = (abs(number) % 10) * -1
+else:
+    last = number % 10
 
 str1 = "Last digit of {:d} is {:d} and is ".format(number, last)
 
