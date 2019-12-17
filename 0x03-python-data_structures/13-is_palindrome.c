@@ -31,7 +31,10 @@ int is_palindrome(listint_t **head)
 
 	for (len = 0; h; h = h->next, len++)
 		;
-	for (i = 1; i <= len; i++, len--)
+	if (len == 1)
+		return (1);
+
+	for (i = 1; i < len; i++, len--)
 	{
 		if (get_nth(head, i) != get_nth(head, len))
 			return (0);
