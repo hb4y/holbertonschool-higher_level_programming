@@ -26,7 +26,7 @@ int is_palindrome(listint_t **head)
 	int len, i;
 
 	if (!head || !(*head))
-		return (0);
+		return (1);
 	h = *head;
 
 	for (len = 0; h; h = h->next, len++)
