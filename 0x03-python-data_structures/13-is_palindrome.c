@@ -1,21 +1,5 @@
 #include "lists.h"
 /**
- * get_nth - get the nth element of list
- * @head: head of list
- * @nth: nth pos
- * Return: value of n en nth pos
- */
-int get_nth(listint_t **head, int nth)
-{
-	int i;
-	listint_t *aux;
-
-	aux = *head;
-	for (i = 0; i < nth - 1; aux = aux->next, i++)
-		;
-	return (aux->n);
-}
-/**
   * is_palindrome - check if is palindrome
   * @head: head of list
   * Return: 0 if not pal 1 is pal
@@ -24,19 +8,21 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *h;
 	int len, i;
+	int aux[4096];
 
 	if (!head || !(*head))
 		return (1);
 	h = *head;
 
 	for (len = 0; h; h = h->next, len++)
-		;
+		aux[len] = h->n;
+
 	if (len == 1)
 		return (1);
 
-	for (i = 1; i < len; i++, len--)
+	for (i = 0; i < len; i++, len--)
 	{
-		if (get_nth(head, i) != get_nth(head, len))
+		if (aux[i] != aux[len - 1])
 			return (0);
 	}
 
