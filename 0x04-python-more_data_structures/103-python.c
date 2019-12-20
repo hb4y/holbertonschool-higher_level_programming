@@ -31,12 +31,12 @@ void print_python_list(PyObject *p)
  */
 void print_python_bytes(PyObject *p)
 {
-	printf("[.] bytes object info");
+	printf("[.] bytes object info\n");
 
 	if (PyBytes_Check(p))
 	{
 		return;
 	}
 	else
-		printf("  [ERROR] Invalid Bytes Object");
+		printf("  [ERROR] Invalid Bytes Object\n");
 }
