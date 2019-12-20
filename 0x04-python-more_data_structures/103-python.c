@@ -31,11 +31,29 @@ void print_python_list(PyObject *p)
  */
 void print_python_bytes(PyObject *p)
 {
+	int max_bytes, i;
+	char *as_str;
+
 	printf("[.] bytes object info\n");
 
 	if (PyBytes_Check(p))
 	{
-		return;
+		PyBytes_AsStringAndSize(p, &as_str, &max_bytes);
+		printf("  size: %i\n", max_bytes);
+		printf("  trying string: %s\n", as_str);
+
+		max_bytes = (max_bytes > 10) ? (10) : (max_bytes + 1);
+
+		printf("  first %li bytes: ", max_bytes);
+
+		for (i = 0; i < max_bytes; i++)
+		{
+			printf("%02hhx", as_str[i]);
+			if (i < max_bytes - 1)
+				printf(" ");
+			else
+				printf("\n");
+		}
 	}
 	else
 		printf("  [ERROR] Invalid Bytes Object\n");
