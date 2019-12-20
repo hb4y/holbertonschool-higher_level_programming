@@ -4,10 +4,8 @@ def roman_to_int(roman_string):
     d = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     res = 0
 
-    if not isinstance(roman_string, str) or roman_string is None:
+    if (not isinstance(roman_string, str)) or (roman_string is None):
         return res
-    if len(roman_string) <= 0:
-        return None
 
     if len(roman_string) == 1:
             return d[roman_string]
