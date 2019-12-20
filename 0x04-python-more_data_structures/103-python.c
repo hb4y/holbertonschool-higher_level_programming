@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <Python.h>
+#include <string.h>
+
+void print_python_bytes(PyObject *p);
 /**
   * print_python_list - print a python list
   * @p: Python List Obj
@@ -21,6 +24,8 @@ void print_python_list(PyObject *p)
 	{
 		item = aux->ob_item[i];
 		printf("Element %d: %s\n", i, (char *)(item->ob_type)->tp_name);
+		if (strcmp((item->ob_type)->tp_name, "bytes") == 0)
+			print_python_bytes(item);
 	}
 }
 
