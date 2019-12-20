@@ -2,12 +2,9 @@
 def roman_to_int(roman_string):
     if (isinstance(roman_string, str)) or (roman_string):
         d = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-        res = d[roman_string[0]]
+        res = 0
 
-        if len(roman_string) == 1:
-                return int(res)
-
-        for i in range(1, len(roman_string)):
+        for i in range(0, len(roman_string)):
             if d[roman_string[i - 1]] < d[roman_string[i]]:
                 res += d[roman_string[i]] - 2 * d[roman_string[i - 1]]
             else:
