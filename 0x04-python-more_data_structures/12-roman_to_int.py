@@ -6,10 +6,9 @@ def roman_to_int(roman_string):
 
     if not isinstance(roman_string, str) or roman_string is None:
         return res
+    if len(roman_string) <= 0:
+        return None
 
-    for i in roman_string:
-        if not (i in d.keys()):
-            return res
     if len(roman_string) == 1:
             return d[roman_string]
 
