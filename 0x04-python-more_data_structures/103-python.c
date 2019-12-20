@@ -32,7 +32,7 @@ void print_python_list(PyObject *p)
 void print_python_bytes(PyObject *p)
 {
 	printf("[.] bytes object info");
-	
+
 	if (PyBytes_Check(p))
 	{
 		return;
