@@ -25,6 +25,8 @@ class Square:
             print("")
             return
         for i in range(self.__size):
+            for offset in range(self.__position[0]):
+                print(" ", end="")
             for j in range(self.__size):
                 print("#", end="")
             print("")
