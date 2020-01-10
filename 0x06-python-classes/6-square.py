@@ -2,7 +2,7 @@
 class Square:
     """Square class"""
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
+        self.size = size
         self.position = position
 
     def area(self):
@@ -24,10 +24,10 @@ class Square:
         if self.__size == 0:
             print("")
             return
-        for offset in range(self.__position[1]):
+        for offset_down in range(self.__position[1]):
             print("")
         for i in range(self.__size):
-            for offset in range(self.__position[0]):
+            for offset_right in range(self.__position[0]):
                 print(" ", end="")
             for j in range(self.__size):
                 print("#", end="")
