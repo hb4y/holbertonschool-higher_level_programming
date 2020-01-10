@@ -43,4 +43,3 @@ class Square:
         if largo or not_tuple or not_num or less:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-
