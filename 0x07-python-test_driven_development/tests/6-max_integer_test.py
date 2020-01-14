@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-"""
-unittests for
-function def max_integer(list=[]):
+"""Unittest for max_integer([..])
 """
 import unittest
 max_integer = __import__('6-max_integer').max_integer
-
 
 class TestMaxInteger(unittest.TestCase):
     """
