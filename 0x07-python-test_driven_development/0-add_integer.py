@@ -4,6 +4,8 @@ add_integer - Function that sum two integers
 a: integer
 b: integer initializated to 98 by default
 """
+
+
 def add_integer(a, b=98):
     """
         Add two integers
