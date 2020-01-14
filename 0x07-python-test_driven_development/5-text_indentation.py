@@ -12,6 +12,7 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+    text = text.strip()
     n = len(text)
     aux = 0
     for word in text.split():
