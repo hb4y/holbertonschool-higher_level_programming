@@ -4,6 +4,8 @@ matrix_divided - divide a matrix for a number
 matrix: matrix to divide
 div: integer to divide the matrix
 """
+
+
 def matrix_divided(matrix, div):
     """
     Divide matrix method
