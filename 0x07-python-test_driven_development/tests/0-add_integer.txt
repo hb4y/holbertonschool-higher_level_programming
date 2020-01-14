@@ -30,7 +30,7 @@ Now use it:
 
 >>> add_integer(float("inf"), 1)
 Traceback (most recent call last):
-OverflowError: cannot convert float to integer
+OverflowError: cannot convert float infinity to integer
 
 >>> add_integer(float("nan"), 1)
 Traceback (most recent call last):
