@@ -1,0 +1,22 @@
+The ``5-text_indentation.py`` module
+======================
+
+Using ``5-text_indentation.py``
+----------------------
+
+Import:
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+>>> text_indentation("    pikachu    ")
+pikachu
+
+>>> text_indentation("carro.")
+carro.
+<BLANKLINE>
+
+>>> text_indentation(1)
+Traceback (most recent call last):
+TypeError: text must be a string
