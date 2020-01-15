@@ -3,7 +3,6 @@
 ## Description
 What you should learn from this project:
 
-* Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
 * What is an object
 * What is the difference between a class and an object or instance
 * What is the difference between immutable object and mutable object
