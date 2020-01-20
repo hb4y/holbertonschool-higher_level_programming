@@ -3,7 +3,6 @@
 ## Description
 What you should learn from this project:
 
-* Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
 * What is a superclass, baseclass or parentclass
 * What is a subclass
 * How to list all attributes and methods of a class or instance
