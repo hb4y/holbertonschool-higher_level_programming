@@ -23,3 +23,6 @@ Import file
 [-1, 1, 2]
 >>> lista is aux
 False
+>>> lista = MyList()
+>>> lista.print_sorted()
+[]
