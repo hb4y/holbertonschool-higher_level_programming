@@ -1,0 +1,24 @@
+The ``my_list`` module
+======================
+
+Using ``my_list``
+-------------------
+
+Import file
+>>> MyList = __import__('1-my_list').MyList
+
+>>> lista = [2, 1]
+>>> lista.print_sorted()
+[1, 2]
+>>> print(lista)
+[2, 1]
+
+>>> lista.append(-1)
+>>> lista.print_sorted()
+[-1, 1, 2]
+
+>>> lista = MyList([1, 3, 2])
+>>> aux = my_list.print_sorted()
+[1, 2, 3]
+>>> lista is aux
+False
