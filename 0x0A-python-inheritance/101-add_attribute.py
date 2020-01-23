@@ -5,8 +5,7 @@ add attribute if can
 
 
 def add_attribute(obj, aname, value):
-    """if not inmutable set attrib"""
-    if isinstance(obj, (bool, int, float, tuple, str, frozenset)):
+    """set attrib"""
+    if obj.__class__.__module__ == 'builtins':
         raise TypeError("can't add new attribute")
-    else:
-        setattr(obj, aname, value)
+    setattr(obj, aname, value)
