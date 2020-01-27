@@ -50,7 +50,7 @@ class Rectangle(Base):
     @property
     def x(self):
         """x getter"""
-        return self.x
+        return self.__x
 
     @x.setter
     def x(self, x):
