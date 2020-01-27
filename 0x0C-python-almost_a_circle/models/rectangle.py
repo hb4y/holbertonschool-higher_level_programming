@@ -83,3 +83,10 @@ class Rectangle(Base):
         """display rectangle"""
         for i in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """custom __str__"""
+        aux1 = "[Rectangle] (" + str(self.id) + ")"
+        aux2 = " " + str(self.__x) + "/" + str(self.__y) + " -"
+        aux3 = " " + str(self.__width) + "/" + str(self.__height)
+        return aux1 + aux2 + aux3
