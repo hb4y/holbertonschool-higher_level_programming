@@ -94,9 +94,13 @@ class Rectangle(Base):
         aux3 = " " + str(self.__width) + "/" + str(self.__height)
         return aux1 + aux2 + aux3
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update attrib"""
-        if len(args):
-            attrib = ["id", "width", "height", "x", "y"]
+        attrib = ["id", "width", "height", "x", "y"]
+        if args and len(args):
             for index, value in enumerate(args):
                 setattr(self, attrib[index], value)
+        else:
+            for key, value in kwargs.items():
+                if key in attrib:
+                    setattr(self, key, value)
