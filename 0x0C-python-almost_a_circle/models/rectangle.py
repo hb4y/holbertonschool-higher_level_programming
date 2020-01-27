@@ -93,3 +93,10 @@ class Rectangle(Base):
         aux2 = " " + str(self.__x) + "/" + str(self.__y) + " -"
         aux3 = " " + str(self.__width) + "/" + str(self.__height)
         return aux1 + aux2 + aux3
+
+    def update(self, *args):
+        """update attrib"""
+        if len(args):
+            attrib = ["id", "width", "height", "x", "y"]
+            for index, value in enumerate(args):
+                setattr(self, attrib[index], value)
