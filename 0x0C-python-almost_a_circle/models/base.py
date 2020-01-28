@@ -36,3 +36,9 @@ class Base:
         info = cls.to_json_string(tmp)
         with open(str(cls.__name__) + ".json", "w") as new_file:
             new_file.write(info)
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string and len(json_string):
+            return json.loads(json_string)
+        return []
