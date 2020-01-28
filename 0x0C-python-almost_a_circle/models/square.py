@@ -19,3 +19,12 @@ class Square(Rectangle):
         aux2 = ") " + str(self.x) + "/" + str(self.y)
         aux3 = " - " + str(self.width)
         return aux1 + aux2 + aux3
+
+    @property
+    def size(self):
+        return self.width
+
+    @size.setter
+    def size(self, size):
+        self.width = size
+        self.height = size
