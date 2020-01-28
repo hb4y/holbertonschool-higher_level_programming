@@ -57,7 +57,7 @@ class Base:
         filename = cls.__name__ + ".json"
         with open(filename, "r") as curr_file:
             content = curr_file.read()
-        if not len(content):
+        if len(content) == 0:
             return []
         data = []
         data = cls.from_json_string(content)
