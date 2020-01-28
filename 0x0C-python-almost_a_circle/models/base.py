@@ -51,3 +51,16 @@ class Base:
             new = cls(1)
         new.update(**dictionary)
         return new
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        with open(filename, "r") as curr_file:
+            content = curr_file.read()
+        if not len(content):
+            return []
+        data = cls.from_json_string(content)
+        list_objs = []
+        for item in data:
+            list_objs.append(cls.create(**item))
+        return list_objs
