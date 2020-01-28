@@ -44,8 +44,7 @@ class Square(Rectangle):
         """to dic"""
         aux = {}
         aux["id"] = self.id
-        aux["width"] = self.width
-        aux["height"] = self.height
+        aux["size"] = self.width
         aux["x"] = self.x
         aux["y"] = self.y
         return aux
