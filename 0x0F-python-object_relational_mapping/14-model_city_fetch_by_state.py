@@ -16,8 +16,8 @@ if __name__ == "__main__":
     engine = create_engine(cs, pool_pre_ping=True)
     Base.metadata.create_all(engine)
     s = Session(engine)
-    rs = s.query(City, State).filter(City.state_id == State.id) \
-                                   .order_by(City.id).all()
-    for city, state in rs:
+    r = s.query(City, State) \
+        .filter(City.state_id == State.id).order_by(City.id).all()
+    for city, state in r:
         print("{}: ({}) {}".format(state.name, city.id, city.name))
     s.close()
